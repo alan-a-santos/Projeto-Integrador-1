@@ -1,0 +1,177 @@
+*{
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0px ;
+}
+
+header{
+    display: flex;
+    align-items: center;
+    background-color: darkgreen;
+}
+
+h1{
+    font-size: 60px;
+    color: whitesmoke;
+    margin-left: 300px;
+    color: whitesmoke;
+}
+h2{
+    font-size: 60px;
+    color: whitesmoke;
+    margin-left: 300px;
+    color: darkgreen;
+    margin-top: -20px;
+    margin-bottom: 30px;
+}
+.menu{
+    height: 790px;
+    width: 50px;
+    margin-left: 0px;
+    border-color: seagreen;
+    border-radius: 5px;
+    border-left: none;
+    margin-top: px;
+    
+}
+.fig{
+    margin-top: 20px;
+    padding: 15px;
+    width: 100px;
+    height: 100px;
+}
+section{
+    display: flex ;
+}
+.cad{
+    margin-left: 20px;
+    border-color: seagreen;
+    border-radius: 5px;
+    padding-top: 50px;
+    width: 1650px;
+}
+.lentrada{
+    margin-left: 15px;
+    color: darkgreen;
+    font-weight: 700;
+ 
+}
+.entrada{
+    border-radius: 3px;
+    margin-top:  2px;
+    margin-left: 15px;
+    height: 20px;
+    font-size: 16px;
+
+}
+#lnome{
+    margin-left: 60px;
+}
+#nome{
+    width: 400px;
+    height: 25px;
+}
+#email{
+    width: 300px;
+}
+#lcpf{
+    margin-left: 295px;
+}
+#lnascimento{
+    margin-left: 140px;
+}
+#lcelular{
+    margin-left: 63px;
+}
+#lemail{
+    margin-left: 165px;
+}
+#linstagram{
+    margin-left: 275px;
+}
+#instagram{
+    width: 250px;
+}
+.p2{
+    margin-top: 30px;
+}
+#cep{
+    width: 100px;
+    text-align: center;
+}
+#lendereco{
+    margin-left: 90px;  
+}
+#endereco{
+    width: 450px;
+}
+#lnum{
+    margin-left: 400px;
+}
+#num{
+    width: 80px;
+    text-align: center;
+}
+#lbairro{
+    margin-left: 85px;
+}
+#lcidade{
+    margin-left: 170px;
+}
+#lentrega{
+    margin-left: 165px;
+}
+.p4{
+    margin-top: 100px;
+    margin-left: 15px;
+}
+#observa{
+    border-radius: 5px;
+    width: 1000px;
+    height: 300px;
+    font-size: 20px;
+    border-color: darkgreen;
+}
+#confirma{
+    margin-left: 300px;
+    width: 200px;
+    height: 200px;
+}
+#id{
+    width: 50px;
+}
+#ldentrega{
+    margin-left: 55px;
+}
+#entrega{
+    height: 25px;
+}
+#descricao{
+    width: 400px;
+    height: 25px;
+    margin-top: 5px;
+    border-style: solid;
+}
+#ldescricao{
+    margin-left: 23px;
+}
+#quant{
+    width: 50px;
+    
+}
+#lanota{
+    margin-left: 337px;
+}
+#anota{
+    width: 500px;
+}
+#adiciona{
+    margin-left: 2px;;
+}
+.p3{
+    align-items: center;
+    
+}
+
+#bad{
+    display: inline;
+}

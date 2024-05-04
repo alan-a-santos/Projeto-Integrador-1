@@ -1,0 +1,48 @@
+*{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body{
+    align-items: center;
+    align-content: center;
+    text-align: center;
+    background-color:rgb(0, 139, 97);;
+}
+fieldset{
+    width:700px ;
+    height: 300px;
+    margin: 0px auto;
+    margin-top: 25vh;
+    background-image: url("../imagens/Logo.jpeg");
+    background-repeat: no-repeat;
+    background-size: 350px;
+    align-items: end;
+    text-align:center;
+background-color: whitesmoke
+  
+}
+
+h1{
+    margin-left: 350px;
+    margin-bottom: 40px;
+    color: darkgreen
+}
+.entrada{
+    margin-left: 350px;
+    height: 25px;
+    width: 200px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+#logar{
+    margin-left: 350px;
+    border-radius: 5px;
+    margin-top: 20px;
+    width: 210px;
+    height: 35px;
+    background-color: rgb(0, 139, 97);;
+    color: whitesmoke;
+    font-size: 20px;
+    font-weight: bold;
+}
