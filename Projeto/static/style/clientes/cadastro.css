@@ -133,6 +133,8 @@ section{
 }
 #confirma{
     margin-left: 300px;
-    width: 200px;
-    height: 200px;
+    width: 220px;
+    height: 220px;
+    background-image: url(/static/imagens/confirmar.png);
+    border: none;
 }

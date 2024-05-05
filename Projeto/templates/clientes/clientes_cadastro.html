@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dmais Alimentação Saudável</title>
     <link rel="stylesheet" href="/static/style/clientes/cadastro.css">
+    
 </head>
 <body>
     <header>
@@ -23,7 +24,7 @@
         <section>
             <fieldset class="cad">
                 <h2> Gestão de Clientes - Cadastro</h2>
-                <form action=""></form>
+                <form action="cliente_cadastrado" method="post">
                     <label for="" class="lentrada">Nome do Cliente</label>
                     <label for="" class="lentrada" id="lcpf">CPF/CNPJ</label>
                     <label for="" class="lentrada" id="lnascimento">Nascimento</label>
@@ -47,23 +48,25 @@
                        <!-- <label for=""class="lentrada" id="lcadastro">Data Cadastro</label>-->
                     </p>
                     <p class="p3">
-                        <input type="text" name="cep" id="cep"  class="entrada">
-                        <input type="text" name="endereco" id="endereco"  class="entrada">
+                        <input type="text" name="cep" id="cep"  class="entrada" onchange="consultacep()">
+                        <input type="text" name="endereco" id="endereco"  class="entrada" >
                         <input type="text" name="num" id="num"  class="entrada">
-                        <input type="text" name="bairro" id="bairro"  class="entrada">
-                        <input type="text" name="cidade" id="cidade"  class="entrada">
+                        <input type="text" name="bairro" id="bairro"  class="entrada" >
+                        <input type="text" name="cidade" id="cidade"  class="entrada" >
                         <!--<input type="text" name="dcadastro" id="dcadastro"  class="entrada">-->
                     </p>
                     <p class="p4">
                         <textarea name="observa" id="observa"></textarea>
-                        <img src="../static/imagens/confirmar.png" alt="" id="confirma">
+                        <button type="submit" id="confirma"></button>
                     </p>
+                </form>
             </fieldset>
         </section>
 
     </div>
     </section>
 
- 
+    <script src="/static/scripts/consulta_cep.js"></script>
 </body>
+
 </html>
