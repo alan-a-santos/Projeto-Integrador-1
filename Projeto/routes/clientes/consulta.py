@@ -1,7 +1,13 @@
-from flask import Blueprint, render_template
+from flask import Blueprint, render_template,request
+import mysql.connector
 
 consulta_route = Blueprint('consulta', __name__)
 
+@consulta_route.route('/consulta')
+def dados():
+    cliente = request.form['nome']
+    print(cliente)
+    
 # @consulta_route.route('/home1')
 # def home1():
 #     return render_template('home.html')

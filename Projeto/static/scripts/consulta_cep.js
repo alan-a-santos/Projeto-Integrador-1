@@ -23,3 +23,7 @@ function consultacep(){
       });
 }    
 }
+
+function carrega_dados(){
+    
+}

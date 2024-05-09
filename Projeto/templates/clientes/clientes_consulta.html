@@ -24,14 +24,21 @@
             <fieldset class="cad">
                 <h2> Gestão de Clientes - Consulta</h2>
                 <form action=""></form>
-                    <label for="" class="lentrada">Nome do Cliente</label>
+                    <label for="" class="lentrada" id="lid">ID</label>
+                    <label for="" class="lentrada" id="lnome">Nome do Cliente</label>
                     <label for="" class="lentrada" id="lcpf">CPF/CNPJ</label>
                     <label for="" class="lentrada" id="lnascimento">Nascimento</label>
                     <label for="" class="lentrada" id="lcelular">Celular</label>
                     <label for="" class="lentrada" id="lemail">E-mail</label>
                     <label for="" class="lentrada" id="linstagram">Instagram</label>
                     <p>
-                        <input type="text" name="nome" id="nome" class="entrada">
+                        <input type="text" name="id" id="id" class="entrada">
+                        <select name="nome" id="nome", class="entrada" onchange="pesq()">
+                        {% for c in clientes %}
+                            <option value="{{ c }}">{{ c}}</option>
+                        {% endfor %}  
+                        </select>
+                        <!--<input type="text" name="nome" id="nome" class="entrada">-->
                         <input type="text" name="cpf"  id="cpf" class="entrada">
                         <input type="date" name="nascimento"  id="nascimento" class="entrada">
                         <input type="tel" name="celular"  id="celular" class="entrada">
@@ -44,7 +51,7 @@
                         <label for=""class="lentrada" id="lnum">Nº</label>
                         <label for=""class="lentrada" id="lbairro">Bairro</label>
                         <label for=""class="lentrada" id="lcidade">Cidade</label>
-                       <!-- <label for=""class="lentrada" id="lcadastro">Data Cadastro</label>-->
+                       <label for=""class="lentrada" id="lcadastro">Data Cadastro</label>
                     </p>
                     <p class="p3">
                         <input type="text" name="cep" id="cep"  class="entrada">
@@ -52,10 +59,11 @@
                         <input type="text" name="num" id="num"  class="entrada">
                         <input type="text" name="bairro" id="bairro"  class="entrada">
                         <input type="text" name="cidade" id="cidade"  class="entrada">
-                        <!--<input type="text" name="dcadastro" id="dcadastro"  class="entrada">-->
+                        <input type="text" name="dcadastro" id="dcadastro"  class="entrada">
                     </p>
                     <p class="p4">
                         <textarea name="observa" id="observa"></textarea>
+                        
                         <img src="../static/imagens/confirmar.png" alt="" id="confirma">
                     </p>
             </fieldset>
@@ -64,6 +72,6 @@
     </div>
     </section>
 
- 
+ <script src="/static/scripts/teste.js"></script>
 </body>
 </html>
