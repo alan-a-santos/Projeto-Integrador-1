@@ -32,12 +32,13 @@
                     <label for="" class="lentrada" id="lemail">E-mail</label>
                     <label for="" class="lentrada" id="linstagram">Instagram</label>
                     <p>
-                        <input type="text" name="id" id="id" class="entrada">
-                        <select name="nome" id="nome", class="entrada" onchange="pesq()">
+                        <input type="text" name="id" id="id" class="entrada" disabled>
+                        <select name="nome" id="nome", class="entrada" onchange="carrega_dados()">
                         {% for c in clientes %}
                             <option value="{{ c }}">{{ c}}</option>
                         {% endfor %}  
                         </select>
+                       
                         <!--<input type="text" name="nome" id="nome" class="entrada">-->
                         <input type="text" name="cpf"  id="cpf" class="entrada">
                         <input type="date" name="nascimento"  id="nascimento" class="entrada">
@@ -55,16 +56,16 @@
                     </p>
                     <p class="p3">
                         <input type="text" name="cep" id="cep"  class="entrada">
-                        <input type="text" name="endereco" id="endereco"  class="entrada">
+                        <input type="text" name="endereco" id="endereco"  class="entrada" disabled>
                         <input type="text" name="num" id="num"  class="entrada">
-                        <input type="text" name="bairro" id="bairro"  class="entrada">
-                        <input type="text" name="cidade" id="cidade"  class="entrada">
-                        <input type="text" name="dcadastro" id="dcadastro"  class="entrada">
+                        <input type="text" name="bairro" id="bairro"  class="entrada" disabled>
+                        <input type="text" name="cidade" id="cidade"  class="entrada"disabled>
+                        <input type="text" name="dcadastro" id="dcadastro"  class="entrada" disabled>
                     </p>
                     <p class="p4">
                         <textarea name="observa" id="observa"></textarea>
                         
-                        <img src="../static/imagens/confirmar.png" alt="" id="confirma">
+                        <!--<img src="../static/imagens/confirmar.png" alt="" id="confirma">-->
                     </p>
             </fieldset>
         </section>
@@ -72,6 +73,6 @@
     </div>
     </section>
 
- <script src="/static/scripts/teste.js"></script>
+ <script src="/static/scripts/codigos.js"></script>
 </body>
 </html>

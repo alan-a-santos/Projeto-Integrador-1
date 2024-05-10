@@ -23,7 +23,7 @@
         <section>
             <fieldset class="cad">
                 <h2> Gestão de Clientes - Atualização</h2>
-                <form action=""></form>
+                <form action="cliente_atualizado", method="post">
                     <label for="" class="lentrada" id="lid">ID</label>
                     <label for="" class="lentrada" id="lnome">Nome do Cliente</label>
                     <label for="" class="lentrada" id="lcpf">CPF/CNPJ</label>
@@ -33,7 +33,7 @@
                     <label for="" class="lentrada" id="linstagram">Instagram</label>
                     <p>
                         <input type="text" name="id" id="id" class="entrada">
-                        <select name="nome" id="nome", class="entrada" onclick="dados()">
+                        <select name="nome" id="nome", class="entrada" onclick="carrega_dados()">
                         {% for c in clientes %}
                             <option value="{{ c }}">{{ c }}</option>
                         {% endfor %}  
@@ -50,26 +50,27 @@
                         <label for=""class="lentrada" id="lnum">Nº</label>
                         <label for=""class="lentrada" id="lbairro">Bairro</label>
                         <label for=""class="lentrada" id="lcidade">Cidade</label>
-                       <!-- <label for=""class="lentrada" id="lcadastro">Data Cadastro</label>-->
+                       <label for=""class="lentrada" id="lcadastro">Data Cadastro</label>
                     </p>
                     <p class="p3">
-                        <input type="text" name="cep" id="cep"  class="entrada">
+                        <input type="text" name="cep" id="cep"  class="entrada" onchange="consultacep()">
                         <input type="text" name="endereco" id="endereco"  class="entrada">
                         <input type="text" name="num" id="num"  class="entrada">
                         <input type="text" name="bairro" id="bairro"  class="entrada">
                         <input type="text" name="cidade" id="cidade"  class="entrada">
-                        <!--<input type="text" name="dcadastro" id="dcadastro"  class="entrada">-->
+                        <input type="text" name="dcadastro" id="dcadastro"  class="entrada" disabled>
                     </p>
                     <p class="p4">
                         <textarea name="observa" id="observa"></textarea>
-                        <img src="../static/imagens/confirmar.png" alt="" id="confirma">
+                        <button type="submit" id="confirma"></button>
                     </p>
+                </form>
             </fieldset>
         </section>
 
     </div>
     </section>
 
- 
+    <script src="/static/scripts/codigos.js"></script>
 </body>
 </html>

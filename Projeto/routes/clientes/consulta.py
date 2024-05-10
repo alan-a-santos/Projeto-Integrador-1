@@ -1,29 +1,25 @@
-from flask import Blueprint, render_template,request
+from flask import Blueprint, render_template,request, jsonify
 import mysql.connector
-
+import json
 consulta_route = Blueprint('consulta', __name__)
 
-@consulta_route.route('/consulta')
+@consulta_route.route('/consulta', methods=['post'])
 def dados():
-    cliente = request.form['nome']
-    print(cliente)
+    cliente = request.json.get('cliente')
+  
+    conexao = mysql.connector.connect(host='localhost', database='d_mais',user='root', password='aas798118')
+    if conexao.is_connected():
+        
+        comando = (f"SELECT * FROM clientes WHERE nome = '{cliente}' " )
+        cursor= conexao.cursor(dictionary=True)
+        cursor.execute(comando)
+        retorno = cursor.fetchall()
+        conexao.commit()       
+        if conexao.is_connected():
+            cursor.close()
+            conexao.close()
     
-# @consulta_route.route('/home1')
-# def home1():
-#     return render_template('home.html')
+    print(type(retorno))
+    return jsonify(retorno)    
 
-# @consulta_route.route('/home1')
-# def home():
-#     return render_template('home.html')
 
-# @consulta_route.route('/atualiza')
-# def atualizar():
-#     return render_template('clientes/clientes_atualiza.html')
-
-# @consulta_route.route('/consulta')
-# def consultar():
-#     return render_template('clientes/clientes_consulta.html')
-
-# @consulta_route.route('/exclui')
-# def excluir():
-#     return render_template('clientes/clientes_exclui.html')

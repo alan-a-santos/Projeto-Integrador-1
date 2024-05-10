@@ -1,5 +1,31 @@
-function pesq(){
+function consultacep(){
 
+        
+   if (document.getElementById(cep) != ""){
+        console.log("fffffff")
+        const cep = document.getElementById('cep')
+        cep.addEventListener('blur', e=> {
+        const value = cep.value.replace(/[^0-9]+/, '');
+        const url = `https://viacep.com.br/ws/${value}/json/`;
+
+        fetch(url)
+        .then( response => response.json())
+        .then( json => {
+          
+            if( json.logradouro ) {
+                console.log(json)
+            document.querySelector('input[name=endereco]').value = json.logradouro;
+                document.querySelector('input[name=bairro]').value = json.bairro;
+                document.querySelector('input[name=cidade]').value = json.localidade;
+                //document.querySelector('input[name=estado]').value = json.uf;
+            }      
+            
+          });
+      });
+}    
+}
+
+function carrega_dados(){
     var cliente = document.querySelector('#nome').value
 
     fetch('/consulta', {
@@ -29,31 +55,4 @@ function pesq(){
    
         
     })
-
-    //fetch('/consulta').then((retorno)=> console.log(retorno))
-    // const response = await fetch('/consulta')
-    // console.log(response)
-    // const data = await response.json()
-    // console.log(data)
-   //var clie = document.querySelector('#nome').value
-  
-//    var cliente = new XMLHttpRequest()
-
-// cliente.open('POST', '/consulta', true)
-// cliente.setRequestHeader('Content-Type', 'application/json')
-// cliente.onreadystatechange=function() {
-//    if (cliente.readyState === XMLHttpRequest.DONE && cliente.status === 200){
-       
-//         console.log("retornado com sucesso")
-//             var item = JSON.parse(cliente.responseText)
-//         document.getElementById('id').value = item.id 
-//         document.getElementById('cpf').value = item.cpf
-//      }
-
-// cliente.send(JSON.stringify({clie:clie}))
-// }
-//     var cliente = fetch('/static/clientesp.json').then((response)=>{response.json().then((clientes)=>{console.log(clientes)})})
-//     fetch('/static/niver.json').then((response)=>{response.json().then((niver) =>{console.log(niver)})})
-
-//     console.log(cliente)
 }
