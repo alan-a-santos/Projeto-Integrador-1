@@ -18,8 +18,7 @@ def consulta():
         retorno = cursor.fetchall()
         conexao.commit()
         clientes=[]
-        clientesp=[]
-        niver =[]
+        
         for i in retorno:
             h =i[1]
             clientes.append(h)
@@ -70,7 +69,7 @@ def exclui():
     return render_template('clientes/clientes_exclui.html',clientes=clientes)
 
 @cliente_route.route('/home')
-def home1():
+def home():
     return render_template('home.html')
 
 

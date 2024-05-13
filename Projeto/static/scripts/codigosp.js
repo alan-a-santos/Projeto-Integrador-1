@@ -1,5 +1,5 @@
-function pesq(){
 
+function carrega_dadosp(){
     var cliente = document.querySelector('#nome').value
 
     fetch('/consulta', {
@@ -15,10 +15,10 @@ function pesq(){
         console.log(data)
         document.getElementById('id').value = item.id
         document.getElementById('cpf').value = item.cpf,
-        document.getElementById('nascimento').value = item.nascimento
+        //document.getElementById('nascimento').value = item.nascimento
         document.getElementById('celular').value = item.celular,
         document.getElementById('email').value = item.email,
-        document.getElementById('instagram').value = item.instagram,
+        //document.getElementById('instagram').value = item.instagram,
         document.getElementById('cep').value = item.cep
         document.getElementById('endereco').value = item.endereco
         document.getElementById('num').value = item.numero
@@ -29,9 +29,4 @@ function pesq(){
    
         
     })
-}
-
-function teste(){
-    var x = document.querySelector('#idc').value
-    console.log(x)
 }

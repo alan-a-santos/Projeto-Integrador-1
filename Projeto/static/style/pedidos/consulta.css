@@ -75,13 +75,13 @@ section{
     width: 300px;
 }
 #lcpf{
-    margin-left: 295px;
+    margin-left: 285px;
 }
 #lnascimento{
     margin-left: 140px;
 }
 #lcelular{
-    margin-left: 63px;
+    margin-left: 140px;
 }
 #lemail{
     margin-left: 165px;
@@ -144,11 +144,12 @@ section{
     margin-left: 55px;
 }
 #entrega{
-    height: 25px;
+    height: 20px;
+    width: 165px;
 }
 #descricao{
     width: 400px;
-    height: 25px;
+    height: 20px;
     margin-top: 5px;
     border-style: solid;
 }
@@ -175,4 +176,18 @@ section{
 
 #bad{
     display: inline;
+}
+#spedido{
+    width: 150px;
+    height: 25px;
+}
+#dpedido{
+    margin-left: 40px;
+}
+#lstatus{
+    margin-left: 435px;
+
+}
+#status{
+    height: 25px;
 }

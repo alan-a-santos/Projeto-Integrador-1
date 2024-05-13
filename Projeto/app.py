@@ -8,9 +8,9 @@ from routes.clientes.consulta import consulta_route
 from routes.clientes.atualiza import atualiza_route
 from routes.clientes.exclui import exclui_route
 
-
 from routes.pedidos.clientes import pedido_route
-
+from routes.pedidos.cadastro import cadastrop_route
+from routes.pedidos.consulta import consultap_route
 
 
 
@@ -21,11 +21,12 @@ app.register_blueprint( acesso_route)
 app.register_blueprint(home_route)
 app.register_blueprint(cliente_route)
 app.register_blueprint(cadastro_route)
-app.register_blueprint(pedido_route)
 app.register_blueprint(consulta_route)
 app.register_blueprint(atualiza_route)
 app.register_blueprint(exclui_route)
-
+app.register_blueprint(pedido_route)
+app.register_blueprint(cadastrop_route)
+app.register_blueprint(consultap_route)
 
 
 #if (__name__) == "(__main__)":

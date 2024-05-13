@@ -1,23 +1,46 @@
-from flask import Blueprint, render_template
+from flask import Blueprint, render_template, request
+import mysql.connector
+from datetime import date
 
-cadastro_route = Blueprint('cadastro', __name__)
 
-# @cadastro_route.route('/home1')
-# def home1():
-#     return render_template('home.html')
+cadastrop_route = Blueprint('cadastrop', __name__)
 
-# @cadastro_route.route('/cadastrop')
-# def cadastro():
-#     return render_template('pedidos/pedidos_cadastro.html')
+@cadastrop_route.route('/cadastro_pedido', methods=['post'])
+def  cadastrar_cliente():
+    conexao = mysql.connector.connect(host='localhost', database='d_mais',user='root', password='aas798118')
+    if conexao.is_connected():
+        idcliente = request.form['id']
+        entrega = request.form['entrega']
+        dentrega = request.form['dentrega']
+        quant = request.form['quant']
+        descricao = request.form['descricao']
+        observa = request.form['observa']
 
-# @cadastro_route.route('/atualizap')
-# def atualizar():
-#     return render_template('pedidos/pedidos_atualiza.html')
+        if entrega == 1:entrega="No Endereço" 
+        else: entrega ="Retirada pelo Cliente"
 
-# @cadastro_route.route('/consultap')
-# def consultar():
-#     return render_template('pedidos/pedidos_consulta.html')
+        prato ={"0": 'Marmita Fitness - Pequena', '1': 'Marmita Fitness - Média','2': 'Marmita Fitness - Grande', '3': 'Marmita Fitness - Mista'}
+        descricao = prato[descricao]
 
-# @cadastro_route.route('/excluip')
-# def excluir():
-#     return render_template('pedidos/pedidos_exclui.html')
+        comando = (f"INSERT INTO pedidos (id,idcliente,entrega,dentrega,quantidade,descricao,observa,cadastro,status) VALUES (default,'{idcliente}','{entrega}','{dentrega}','{quant}','{descricao}','{observa}','{date.today()}','Pedido em Aberto');")
+        cursor= conexao.cursor()
+        cursor.execute(comando)
+        conexao.commit()
+        retorno = cursor.fetchall()
+        
+        comando = ("SELECT * FROM clientes order by nome")
+        cursor= conexao.cursor()
+        cursor.execute(comando)
+        retorno1 = cursor.fetchall()
+        conexao.commit()
+        clientes=[]
+        
+        for i in retorno1:
+            h =i[1]
+            clientes.append(h)
+  
+    if conexao.is_connected():
+        cursor.close()
+        conexao.close()
+    
+    return render_template('pedidos/pedidos_cadastro.html', clientes=clientes)

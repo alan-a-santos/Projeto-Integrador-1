@@ -74,7 +74,7 @@ section{
     width: 300px;
 }
 #lcpf{
-    margin-left: 295px;
+    margin-left: 285px;
 }
 #lnascimento{
     margin-left: 140px;
@@ -133,17 +133,20 @@ section{
 }
 #confirma{
     margin-left: 300px;
-    width: 200px;
-    height: 200px;
+    width: 220px;
+    height: 220px;
+    cursor: pointer;
+    background-image: url(/static/imagens/confirmar.png);
+    border: none;
 }
 #id{
     width: 50px;
 }
 #ldentrega{
-    margin-left: 55px;
+    margin-left: 85px;
 }
 #entrega{
-    height: 25px;
+    
 }
 #descricao{
     width: 400px;
@@ -174,4 +177,18 @@ section{
 
 #bad{
     display: inline;
+}
+#spedido{
+    width: 150px;
+    height: 30px;
+}
+#dpedido{
+    margin-left: 40px;
+}
+#lstatus{
+    margin-left: 435px;
+
+}
+#status{
+    height: 25px;
 }
