@@ -88,11 +88,3 @@ def excluir():
             cursor.close()
             conexao.close()
             return render_template('pedidos/pedidos_exclui.html', clientes=clientes)
-
-# @cliente_route.route('/home1')
-# def home():
-#     return render_template('home.html')
-
-
-
-

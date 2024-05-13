@@ -27,10 +27,8 @@
                     <label for="" class="lentrada" id="lid">ID</label>
                     <label for="" class="lentrada" id = lnome>Nome do Cliente</label>
                     <label for="" class="lentrada" id="lcpf">CPF/CNPJ</label>
-                    <!--<label for="" class="lentrada" id="lnascimento">Nascimento</label>-->
                     <label for="" class="lentrada" id="lcelular">Celular</label>
                     <label for="" class="lentrada" id="lemail">E-mail</label>
-                   
                     <p>
                         <input type="text" name="id" id="id" class="entrada" disabled>
                     <select name="nome" id="nome" class="entrada" onchange="carrega_dadosp()" >
@@ -40,7 +38,6 @@
                             </select>
                         </select>
                         <input type="text" name="cpf"  id="cpf" class="entrada"disabled>
-                        <!--<input type="date" name="nascimento"  id="nascimento" class="entrada">-->
                         <input type="tel" name="celular"  id="celular" class="entrada"disabled>
                         <input type="email" name="email"  id="email" class="entrada"disabled>
                         
@@ -68,7 +65,7 @@
                                 <p>
                                     <label class="lentrada" for="" id="lquant">Quant.</label>
                                     <label class="lentrada" for="" id="ldescricao">Descrição</label>
-                                    <label class="lentrada" for="" id="lanota">Observações do Cliente</label>
+                              
                                     <label for="" class="lentrada" id="lstatus">Situação do Pedido</label>
                                     <label for="" class="lentrada" id="dpedido">Data do Pedido</label>
                                 </p>
@@ -76,7 +73,7 @@
                                     <input type="text" name="quant" id="quant" class="entrada"disabled>
                                     <input name="descricao" id="descricao" class="entrada"disabled>
                                     
-                                    <input type="text" name="anota" id="anota" class="entrada"disabled>
+                               
                                     <select  name="status"  id="status" class="entrada" onchange="carrega_pedidos()"> 
                                         <option value="0"></option>
                                         <option value="1">Pedido em Aberto</option>
@@ -85,21 +82,16 @@
                                     <select  name="spedido"  id="spedido" class="entrada" onchange="carrega_pedido()">
                                         <option value=""></option>
                                      </select>
-                                    
                                 </p>
-                            
                     </p>
                     <p class="p4">
                         <textarea name="observa" id="observa"disabled></textarea>
-                       <!-- <img src="../static/imagens/confirmar.png" alt="" id="confirma">-->
                     </p>
                 </form>
             </fieldset>
         </section>
-
     </div>
     </section>
-
     <script src="/static/scripts/codigos.js"></script>
 </body>
 </html>

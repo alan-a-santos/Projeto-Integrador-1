@@ -32,7 +32,7 @@
                     <label for="" class="lentrada" id="lemail">E-mail</label>
                     <label for="" class="lentrada" id="linstagram">Instagram</label>
                     <p>
-                        <input type="text" name="id" id="id" class="entrada">
+                        <input type="text" name="id" id="id" class="entrada" readonly>
                         <select name="nome" id="nome", class="entrada" onclick="carrega_dados()">
                         {% for c in clientes %}
                             <option value="{{ c }}">{{ c }}</option>
@@ -54,11 +54,11 @@
                     </p>
                     <p class="p3">
                         <input type="text" name="cep" id="cep"  class="entrada" onchange="consultacep()">
-                        <input type="text" name="endereco" id="endereco"  class="entrada">
+                        <input type="text" name="endereco" id="endereco"  class="entrada" readonly>
                         <input type="text" name="num" id="num"  class="entrada">
-                        <input type="text" name="bairro" id="bairro"  class="entrada">
-                        <input type="text" name="cidade" id="cidade"  class="entrada">
-                        <input type="text" name="dcadastro" id="dcadastro"  class="entrada" disabled>
+                        <input type="text" name="bairro" id="bairro"  class="entrada" readonly>
+                        <input type="text" name="cidade" id="cidade"  class="entrada"readonly>
+                        <input type="text" name="dcadastro" id="dcadastro"  class="entrada" readonly>
                     </p>
                     <p class="p4">
                         <textarea name="observa" id="observa"></textarea>

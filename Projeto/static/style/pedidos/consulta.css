@@ -65,7 +65,7 @@ section{
 
 }
 #lnome{
-    margin-left: 60px;
+    margin-left: 55px;
 }
 #nome{
     width: 400px;
@@ -75,7 +75,7 @@ section{
     width: 300px;
 }
 #lcpf{
-    margin-left: 285px;
+    margin-left: 290px;
 }
 #lnascimento{
     margin-left: 140px;
@@ -122,7 +122,7 @@ section{
     margin-left: 165px;
 }
 .p4{
-    margin-top: 100px;
+    margin-top: 50px;
     margin-left: 15px;
 }
 #observa{
@@ -141,11 +141,11 @@ section{
     width: 50px;
 }
 #ldentrega{
-    margin-left: 55px;
+    margin-left: 85px;
 }
 #entrega{
     height: 20px;
-    width: 165px;
+    width: 195px;
 }
 #descricao{
     width: 400px;
@@ -182,10 +182,10 @@ section{
     height: 25px;
 }
 #dpedido{
-    margin-left: 40px;
+    margin-left: 20px;
 }
 #lstatus{
-    margin-left: 435px;
+    margin-left: 345px;
 
 }
 #status{

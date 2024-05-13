@@ -56,37 +56,4 @@ def consultap2():
             conexao.close()
     
     return jsonify(retorno) 
-    
-    
-    
-    # if conexao.is_connected():
-    #     comando = ("SELECT * FROM clientes order by nome")
-    #     cursor= conexao.cursor()
-    #     cursor.execute(comando)
-    #     retorno1 = cursor.fetchall()
-    #     conexao.commit()
-    #     clientes=[]
-        
-    #     for i in retorno1:
-    #         h =i[1]
-    #         clientes.append(h)
-
-# @consulta_route.route('/home1')
-# def home1():
-#     return render_template('home.html')
-
-# @consulta_route.route('/home1')
-# def home():
-#     return render_template('home.html')
-
-# @consulta_route.route('/atualizap')
-# def atualizar():
-#     return render_template('pedidos/pedidos_atualiza.html')
-
-# @consulta_route.route('/consultap')
-# def consultar():
-#     return render_template('pedidos/pedidos_consulta.html')
-
-# @consulta_route.route('/excluip')
-# def excluir():
-#     return render_template('pedidos/pedidos_exclui.html')
+ 

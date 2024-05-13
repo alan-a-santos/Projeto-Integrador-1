@@ -65,7 +65,7 @@ section{
 
 }
 #lnome{
-    margin-left: 60px;
+    margin-left: 55px;
 }
 #nome{
     width: 400px;
@@ -75,13 +75,13 @@ section{
     width: 300px;
 }
 #lcpf{
-    margin-left: 295px;
+    margin-left: 290px;
 }
 #lnascimento{
     margin-left: 140px;
 }
 #lcelular{
-    margin-left: 63px;
+    margin-left: 140px;
 }
 #lemail{
     margin-left: 165px;
@@ -122,7 +122,7 @@ section{
     margin-left: 165px;
 }
 .p4{
-    margin-top: 100px;
+    margin-top: 50px;
     margin-left: 15px;
 }
 #observa{
@@ -144,14 +144,14 @@ section{
     width: 50px;
 }
 #ldentrega{
-    margin-left: 55px;
+    margin-left: 85px;
 }
 #entrega{
-    height: 25px;
+    height: 20px;
 }
 #descricao{
     width: 400px;
-    height: 25px;
+    height: 20px;
     margin-top: 5px;
     border-style: solid;
 }
@@ -184,10 +184,10 @@ section{
     height: 25px;
 }
 #dpedido{
-    margin-left: 50px;
+    margin-left: 40px;
 }
 #lstatus{
-    margin-left: 350px;
+    margin-left: 345px;
 
 }
 #status{

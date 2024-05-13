@@ -59,7 +59,7 @@ section{
     border-radius: 3px;
     margin-top:  2px;
     margin-left: 15px;
-    height: 25px;
+    height: 20px;
     font-size: 16px;
 
 }
@@ -68,7 +68,7 @@ section{
 }
 #nome{
     width: 400px;
-    height: 30px;
+    height: 25px;
 }
 #email{
     width: 300px;
@@ -118,10 +118,10 @@ section{
     margin-left: 170px;
 }
 #lentrega{
-    margin-left: 165px;
+    margin-left: 338px;
 }
 .p4{
-    margin-top: 70px;
+    margin-top: 50px;
     margin-left: 15px;
 }
 #observa{
@@ -143,10 +143,10 @@ section{
     width: 50px;
 }
 #ldentrega{
-    margin-left: 55px;
+    margin-left: 52px;
 }
 #entrega{
-    height: 30px;
+    height: 25px;
 }
 #descricao{
     width: 400px;
@@ -166,7 +166,7 @@ section{
 }
 #anota{
     width: 1480px;
-    height: 25px;
+    height: 20px;
 }
 #adiciona{
     margin-left: 2px;;

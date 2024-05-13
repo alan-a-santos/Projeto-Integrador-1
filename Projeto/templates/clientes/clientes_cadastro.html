@@ -19,7 +19,7 @@
             <a href="consulta"><img class="fig" src="../static/imagens/pesquisar.png" alt=""></a>
             <a href="atualiza"><img class="fig" src="../static/imagens/atualizar.jpg" alt="" ></a>
             <a href="exclui"><img class="fig" src="../static/imagens/excluir.png" alt="" ></a>
-            <a href="home1"><img class="fig" src="../static/imagens/home.jpg" alt="" ></a>
+            <a href="home"><img class="fig" src="../static/imagens/home.jpg" alt="" ></a>
         </fieldset>
         <section>
             <fieldset class="cad">
@@ -32,12 +32,12 @@
                     <label for="" class="lentrada" id="lemail">E-mail</label>
                     <label for="" class="lentrada" id="linstagram">Instagram</label>
                     <p>
-                        <input type="text" name="nome" id="nome" class="entrada">
-                        <input type="text" name="cpf"  id="cpf" class="entrada">
+                        <input type="text" name="nome" id="nome" class="entrada" autocomplete="off">
+                        <input type="text" name="cpf"  id="cpf" class="entrada" autocomplete="off">
                         <input type="date" name="nascimento"  id="nascimento" class="entrada">
-                        <input type="tel" name="celular"  id="celular" class="entrada">
-                        <input type="email" name="email"  id="email" class="entrada">
-                        <input type="text" name="instagram"  id="instagram" class="entrada">
+                        <input type="tel" name="celular"  id="celular" class="entrada" autocomplete="off">
+                        <input type="email" name="email"  id="email" class="entrada" autocomplete="off">
+                        <input type="text" name="instagram"  id="instagram" class="entrada" autocomplete="off">
                     </p>
                     <p class="p2"> 
                         <label for="" class="lentrada" id="lcep">CEP</label>
@@ -45,15 +45,13 @@
                         <label for=""class="lentrada" id="lnum">Nº</label>
                         <label for=""class="lentrada" id="lbairro">Bairro</label>
                         <label for=""class="lentrada" id="lcidade">Cidade</label>
-                       <!-- <label for=""class="lentrada" id="lcadastro">Data Cadastro</label>-->
                     </p>
                     <p class="p3">
                         <input type="text" name="cep" id="cep"  class="entrada" onchange="consultacep()">
-                        <input type="text" name="endereco" id="endereco"  class="entrada"  >
+                        <input type="text" name="endereco" id="endereco"  class="entrada" readonly >
                         <input type="text" name="num" id="num"  class="entrada">
-                        <input type="text" name="bairro" id="bairro"  class="entrada" >
-                        <input type="text" name="cidade" id="cidade"  class="entrada" >
-                        <!--<input type="text" name="dcadastro" id="dcadastro"  class="entrada">-->
+                        <input type="text" name="bairro" id="bairro"  class="entrada" readonly>
+                        <input type="text" name="cidade" id="cidade"  class="entrada" readonly>
                     </p>
                     <p class="p4">
                         <textarea name="observa" id="observa"></textarea>

@@ -27,23 +27,19 @@
                     <label for="" class="lentrada" id="lid">ID</label>
                     <label for="" class="lentrada" id = lnome>Nome do Cliente</label>
                     <label for="" class="lentrada" id="lcpf">CPF/CNPJ</label>
-                    <label for="" class="lentrada" id="lnascimento">Nascimento</label>
                     <label for="" class="lentrada" id="lcelular">Celular</label>
                     <label for="" class="lentrada" id="lemail">E-mail</label>
-                   <!-- <label for="" class="lentrada" id="linstagram">Instagram</label>-->
                     <p>
-                        <input type="text" name="id" id="id" class="entrada" disabled>
+                        <input type="text" name="id" id="id" class="entrada" readonly>
                         <select name="nome" id="nome" class="entrada" onchange="carrega_dadosp()" >
                             {% for c in clientes %}
                             <option value="{{ c }}">{{ c}}</option>
                         {% endfor %}  
                         </select>
                         </select>
-                        <input type="text" name="cpf"  id="cpf" class="entrada" disabled>
-                        <input type="date" name="nascimento"  id="nascimento" class="entrada" disabled>
-                        <input type="tel" name="celular"  id="celular" class="entrada" disabled>
-                        <input type="email" name="email"  id="email" class="entrada" disabled>
-                        <!--<input type="text" name="instagram"  id="instagram" class="entrada"> -->
+                        <input type="text" name="cpf"  id="cpf" class="entrada" readonly>
+                        <input type="tel" name="celular"  id="celular" class="entrada" readonly>
+                        <input type="email" name="email"  id="email" class="entrada" readonly>
                     </p>
                     <p class="p2"> 
                         <label for="" class="lentrada" id="lcep">CEP</label>
@@ -55,29 +51,29 @@
                         <label for=""class="lentrada" id="ldentrega">Entrega em</label>
                     </p>
                     <p class="p3">
-                        <input type="text" name="cep" id="cep"  class="entrada" disabled>
-                        <input type="text" name="endereco" id="endereco"  class="entrada" disabled>
-                        <input type="text" name="num" id="num"  class="entrada" disabled>
-                        <input type="text" name="bairro" id="bairro"  class="entrada" disabled>
-                        <input type="text" name="cidade" id="cidade"  class="entrada" disabled>
-                        <input name="entrega" id="entrega" class="entrada" disabled>
-                        <input type="text" name="dentrega"  id="dentrega" class="entrada" disabled>
+                        <input type="text" name="cep" id="cep"  class="entrada" readonly>
+                        <input type="text" name="endereco" id="endereco"  class="entrada" readonly>
+                        <input type="text" name="num" id="num"  class="entrada" readonly>
+                        <input type="text" name="bairro" id="bairro"  class="entrada" readonly>
+                        <input type="text" name="cidade" id="cidade"  class="entrada" readonly>
+                        <input name="entrega" id="entrega" class="entrada" readonly>
+                        <input type="text" name="dentrega"  id="dentrega" class="entrada" readonly>
                     </p>
 
                     <p class="p2">
                                 <p>
                                     <label class="lentrada" for="" id="lquant">Quant.</label>
                                     <label class="lentrada" for="" id="ldescricao">Descrição</label>
-                                    <label class="lentrada" for="" id="lanota">Observações do Cliente</label>
+                                 
                                     <label for="" class="lentrada" id="lstatus">Situação do Pedido</label>
                                     <label for="" class="lentrada" id="ldpedido">Data do Pedido</label>
                                    
                                 </p>
                                 <p class="p3">
-                                    <input type="text" name="quant" id="quant" class="entrada" disabled>
-                                    <input name="descricao" id="descricao" class="entrada" disabled>
+                                    <input type="text" name="quant" id="quant" class="entrada" readonly>
+                                    <input name="descricao" id="descricao" class="entrada" readonly>
                                     
-                                    <input type="text" name="anota" id="anota" class="entrada">
+                                 
                                     <select  name="status"  id="status" class="entrada" onchange="carrega_pedidos()"> 
                                         <option value="0"></option>
                                         <option value="1">Pedido em Aberto</option>
@@ -86,19 +82,15 @@
                                     <select  name="spedido"  id="spedido" class="entrada" onchange="carrega_pedido()">
                                         <option value=""></option>
                                      </select>
-                                     
-                                    
                                 </p>
-                            
                     </p>
                     <p class="p4">
-                        <textarea name="observa" id="observa"></textarea>
+                        <textarea name="observa" id="observa" readonly></textarea>
                         <button type="submit" id="confirma"></button>
                     </p>
                 </form>
             </fieldset>
         </section>
-
     </div>
     </section>
 

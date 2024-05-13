@@ -16,10 +16,8 @@ function consultacep(){
                 console.log(json)
             document.querySelector('input[name=endereco]').value = json.logradouro;
                 document.querySelector('input[name=bairro]').value = json.bairro;
-                document.querySelector('input[name=cidade]').value = json.localidade;
-                //document.querySelector('input[name=estado]').value = json.uf;
-            }      
-            
+                document.querySelector('input[name=cidade]').value = json.localidade;                
+            }           
           });
       });
 }    
@@ -61,11 +59,9 @@ function carrega_dados(){
 function carrega_dadospedido(){
     var cliente = document.querySelector('#nome').value
     var clie = document.getElementById('nome')
-    document.getElementById('entrega').value=""
     document.getElementById('observa').value = ""
     document.getElementById('dentrega').value = ""
     document.getElementById('descricao').value =  ""
-    document.getElementById('entrega').value =  ""
     document.getElementById('quant').value =  ""
     
   
@@ -82,18 +78,14 @@ function carrega_dadospedido(){
         console.log(data)
         document.getElementById('id').value = item.id
         document.getElementById('cpf').value = item.cpf
-        //document.getElementById('nascimento').value = item.nascimento
         document.getElementById('celular').value = item.celular
         document.getElementById('email').value = item.email
-        //document.getElementById('instagram').value = item.instagram,
         document.getElementById('cep').value = item.cep
         document.getElementById('endereco').value = item.endereco
         document.getElementById('num').value = item.numero
         document.getElementById('bairro').value = item.bairro
         document.getElementById('cidade').value = item.cidade
-        document.getElementById('anota').value = item.observacao
-        console.log(item.observa)
-        //document.getElementById('anota').value = item.observacao
+        document.getElementById('anota').value = item.observacao        
     })
 }
 
@@ -124,18 +116,14 @@ function carrega_dadosp(){
         console.log(data)
         document.getElementById('id').value = item.id
         document.getElementById('cpf').value = item.cpf
-        //document.getElementById('nascimento').value = item.nascimento
         document.getElementById('celular').value = item.celular
         document.getElementById('email').value = item.email
-        //document.getElementById('instagram').value = item.instagram,
         document.getElementById('cep').value = item.cep
         document.getElementById('endereco').value = item.endereco
         document.getElementById('num').value = item.numero
         document.getElementById('bairro').value = item.bairro
         document.getElementById('cidade').value = item.cidade
         document.getElementById('anota').value = item.observacao
-        console.log(item.observa)
-        //document.getElementById('anota').value = item.observacao
     })
 }
 
@@ -169,21 +157,15 @@ function carrega_pedidos(){
             select.removeChild(select.firstChild);
         }
         var opcaoVazia = document.createElement("option");
-            opcaoVazia.value = ""; // Define o valor como vazio
-            opcaoVazia.text = ""; // Define o texto como vazio
+            opcaoVazia.value = ""
+            opcaoVazia.text = ""
         select.appendChild(opcaoVazia)
         
-        data.forEach(function(dicionario) {
-            // Cria um elemento de opção
-            
+        data.forEach(function(dicionario) {           
             var option = document.createElement("option");
-            // Define o valor e o texto da opção
             option.value = dicionario.id;
             option.text = dicionario.cadastro;
-            // Adiciona a opção ao select
             select.appendChild(option);
-
-            
         })});
 }
 function carrega_pedido(){
@@ -204,15 +186,7 @@ function carrega_pedido(){
         document.getElementById('descricao').value = item.descricao
         document.getElementById('entrega').value = item.entrega
         document.getElementById('quant').value = item.quantidade
-        document.getElementById('observa').value = item.observa
-        // //document.getElementById('instagram').value = item.instagram,
-        // document.getElementById('cep').value = item.cep
-        // document.getElementById('endereco').value = item.endereco
-        // document.getElementById('num').value = item.numero
-        // document.getElementById('bairro').value = item.bairro
-        // document.getElementById('cidade').value = item.cidade
-
-    
+        document.getElementById('observa').value = item.observa    
 })
 }
 function limpar(){
@@ -233,5 +207,4 @@ function limpar(){
     document.getElementById('descricao').value =  ""
     document.getElementById('entrega').value =  ""
     document.getElementById('quant').value =  ""
-    
 }

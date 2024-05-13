@@ -19,7 +19,6 @@ def dados():
             cursor.close()
             conexao.close()
     
-    #print(type(retorno))
     return jsonify(retorno)    
 
 
