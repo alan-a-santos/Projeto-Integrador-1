@@ -70,7 +70,24 @@ def atualizap():
 
 @pedido_route.route('/excluip')
 def excluir():
-    return render_template('pedidos/pedidos_exclui.html')
+    conexao = mysql.connector.connect(host='localhost', database='d_mais',user='root', password='aas798118')
+
+    if conexao.is_connected():
+        comando = ("SELECT * FROM clientes order by nome")
+        cursor= conexao.cursor()
+        cursor.execute(comando)
+        retorno = cursor.fetchall()
+        conexao.commit()
+        clientes=[]
+        
+        for i in retorno:
+            h =i[1]
+            clientes.append(h)
+  
+        if conexao.is_connected():
+            cursor.close()
+            conexao.close()
+            return render_template('pedidos/pedidos_exclui.html', clientes=clientes)
 
 # @cliente_route.route('/home1')
 # def home():

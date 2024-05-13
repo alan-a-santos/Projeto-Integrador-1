@@ -11,7 +11,8 @@ from routes.clientes.exclui import exclui_route
 from routes.pedidos.clientes import pedido_route
 from routes.pedidos.cadastro import cadastrop_route
 from routes.pedidos.consulta import consultap_route
-
+from routes.pedidos.atualiza import atualizap_route
+from routes.pedidos.exclui import excluip_route
 
 
 app= Flask(__name__)
@@ -27,6 +28,8 @@ app.register_blueprint(exclui_route)
 app.register_blueprint(pedido_route)
 app.register_blueprint(cadastrop_route)
 app.register_blueprint(consultap_route)
+app.register_blueprint(atualizap_route)
+app.register_blueprint(excluip_route)
 
 
 #if (__name__) == "(__main__)":

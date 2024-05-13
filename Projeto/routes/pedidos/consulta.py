@@ -25,14 +25,14 @@ def consulta():
 def consultap():
     cod = request.json.get('cod')
     sta = request.json.get('sta')
-    print(cod,sta)
+    
     conexao = mysql.connector.connect(host='localhost', database='d_mais',user='root', password='aas798118')
     if conexao.is_connected():
         comando = (f"SELECT cadastro, id FROM pedidos WHERE idcliente = '{cod}' and status ='{sta}' ")
         cursor= conexao.cursor(dictionary=True)
         cursor.execute(comando)
         resposta = cursor.fetchall()
-        print(resposta)
+      
         conexao.commit()              
         if conexao.is_connected():
             cursor.close()

@@ -134,8 +134,11 @@ section{
 }
 #confirma{
     margin-left: 300px;
-    width: 200px;
-    height: 200px;
+    width: 220px;
+    height: 220px;
+    cursor: pointer;
+    background-image: url(/static/imagens/excluir.png);
+    border: none;
 }
 #id{
     width: 50px;
@@ -175,4 +178,27 @@ section{
 
 #bad{
     display: inline;
+}
+#spedido{
+    width: 150px;
+    height: 25px;
+}
+#dpedido{
+    margin-left: 50px;
+}
+#lstatus{
+    margin-left: 350px;
+
+}
+#status{
+    height: 25px;
+}
+#ldpedido{
+    margin-left: 20px;
+}
+#lsituacao{
+    margin-left: 48px;
+}
+#astatus{
+    height: 25px;
 }

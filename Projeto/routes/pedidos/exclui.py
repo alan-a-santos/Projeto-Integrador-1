@@ -1,23 +1,32 @@
-from flask import Blueprint, render_template
+from flask import Blueprint, render_template, request
+import mysql.connector
 
-exclui_route = Blueprint('exclui', __name__)
+excluip_route = Blueprint('excluip', __name__)
 
-# @exclui_route.route('/home1')
-# def home1():
-#     return render_template('home.html')
+@excluip_route.route('/exclui_pedido', methods=["POST"])
+def excluirp(): 
+    id = request.form['spedido']
+    print(id)
+    
+    conexao = mysql.connector.connect(host='localhost', database='d_mais',user='root', password='aas798118')
+    if conexao.is_connected():
+        comando = (f""" DELETE from pedidos WHERE id='{id}'""" )
+        cursor= conexao.cursor()
+        cursor.execute(comando)
+        conexao.commit()       
 
-# @exclui_route.route('/home1')
-# def home():
-#     return render_template('home.html')
+        comando = ("SELECT * FROM clientes ORDER BY nome")
+        cursor= conexao.cursor()
+        cursor.execute(comando)
+        retorno = cursor.fetchall()
+        conexao.commit()
+        clientes=[]
+        for i in retorno:
+            clie = i[1]
+            clientes.append(clie)
 
-# @exclui_route.route('/atualiza')
-# def atualizar():
-#     return render_template('pedidos/pedidos_atualiza.html')
+        if conexao.is_connected():
+            cursor.close()
+            conexao.close()
+            return render_template('pedidos/pedidos_exclui.html', clientes=clientes)
 
-# @exclui_route.route('/consulta')
-# def consultar():
-#     return render_template('pedidos/pedidos_consulta.html')
-
-# @exclui_route.route('/exclui')
-# def excluir():
-#     return render_template('pedidos/pedidos_exclui.html')

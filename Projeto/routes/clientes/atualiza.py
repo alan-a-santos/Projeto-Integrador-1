@@ -37,7 +37,7 @@ def atualizar_cliente():
         for i in retorno:
             clie = i[1]
             clientes.append(clie)
-        print(clientes)
+        
 
         if conexao.is_connected():
             cursor.close()

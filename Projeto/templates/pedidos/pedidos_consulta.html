@@ -32,17 +32,17 @@
                     <label for="" class="lentrada" id="lemail">E-mail</label>
                    
                     <p>
-                        <input type="text" name="id" id="id" class="entrada">
+                        <input type="text" name="id" id="id" class="entrada" disabled>
                     <select name="nome" id="nome" class="entrada" onchange="carrega_dadosp()" >
                             {% for c in clientes %}
                                 <option value="{{ c }}">{{ c}}</option>
                             {% endfor %}  
                             </select>
                         </select>
-                        <input type="text" name="cpf"  id="cpf" class="entrada">
+                        <input type="text" name="cpf"  id="cpf" class="entrada"disabled>
                         <!--<input type="date" name="nascimento"  id="nascimento" class="entrada">-->
-                        <input type="tel" name="celular"  id="celular" class="entrada">
-                        <input type="email" name="email"  id="email" class="entrada">
+                        <input type="tel" name="celular"  id="celular" class="entrada"disabled>
+                        <input type="email" name="email"  id="email" class="entrada"disabled>
                         
                     </p>
                     <p class="p2"> 
@@ -55,28 +55,28 @@
                         <label for=""class="lentrada" id="ldentrega">Entrega em</label>
                     </p>
                     <p class="p3">
-                        <input type="text" name="cep" id="cep"  class="entrada">
-                        <input type="text" name="endereco" id="endereco"  class="entrada">
-                        <input type="text" name="num" id="num"  class="entrada">
-                        <input type="text" name="bairro" id="bairro"  class="entrada">
-                        <input type="text" name="cidade" id="cidade"  class="entrada">
-                        <input name="entrega" id="entrega" class="entrada">
-                        <input type="text" name="dentrega"  id="dentrega" class="entrada">
+                        <input type="text" name="cep" id="cep"  class="entrada"disabled>
+                        <input type="text" name="endereco" id="endereco"  class="entrada"disabled>
+                        <input type="text" name="num" id="num"  class="entrada"disabled>
+                        <input type="text" name="bairro" id="bairro"  class="entrada"disabled>
+                        <input type="text" name="cidade" id="cidade"  class="entrada"disabled>
+                        <input name="entrega" id="entrega" class="entrada"disabled>
+                        <input type="text" name="dentrega"  id="dentrega" class="entrada"disabled>
                     </p>
 
                     <p class="p2">
                                 <p>
                                     <label class="lentrada" for="" id="lquant">Quant.</label>
                                     <label class="lentrada" for="" id="ldescricao">Descrição</label>
-                                    <label class="lentrada" for="" id="lanota">Observação</label>
-                                    <label for="" class="lentrada" id="lstatus">Status do Pedido</label>
+                                    <label class="lentrada" for="" id="lanota">Observações do Cliente</label>
+                                    <label for="" class="lentrada" id="lstatus">Situação do Pedido</label>
                                     <label for="" class="lentrada" id="dpedido">Data do Pedido</label>
                                 </p>
                                 <p class="p3">
-                                    <input type="text" name="quant" id="quant" class="entrada">
-                                    <input name="descricao" id="descricao" class="entrada">
+                                    <input type="text" name="quant" id="quant" class="entrada"disabled>
+                                    <input name="descricao" id="descricao" class="entrada"disabled>
                                     
-                                    <input type="text" name="anota" id="anota" class="entrada">
+                                    <input type="text" name="anota" id="anota" class="entrada"disabled>
                                     <select  name="status"  id="status" class="entrada" onchange="carrega_pedidos()"> 
                                         <option value="0"></option>
                                         <option value="1">Pedido em Aberto</option>
@@ -90,7 +90,7 @@
                             
                     </p>
                     <p class="p4">
-                        <textarea name="observa" id="observa"></textarea>
+                        <textarea name="observa" id="observa"disabled></textarea>
                        <!-- <img src="../static/imagens/confirmar.png" alt="" id="confirma">-->
                     </p>
                 </form>

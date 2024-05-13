@@ -33,7 +33,7 @@
                     <label for="" class="lentrada" id="linstagram">Instagram</label>
                     <p>
                         <input type="text" name="id" id="id" class="entrada" disabled>
-                        <select name="nome" id="nome", class="entrada" onchange="carrega_dadosp()">
+                        <select name="nome" id="nome", class="entrada" onchange="carrega_dados()">
                         {% for c in clientes %}
                             <option value="{{ c }}">{{ c}}</option>
                         {% endfor %}  

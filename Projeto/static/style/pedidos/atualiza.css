@@ -145,12 +145,10 @@ section{
 #ldentrega{
     margin-left: 85px;
 }
-#entrega{
-    
-}
+
 #descricao{
     width: 400px;
-    height: 25px;
+    height: 20px;
     margin-top: 5px;
     border-style: solid;
 }
@@ -162,7 +160,7 @@ section{
     
 }
 #lanota{
-    margin-left: 337px;
+    margin-left: 347px;
 }
 #anota{
     width: 500px;
@@ -180,15 +178,24 @@ section{
 }
 #spedido{
     width: 150px;
-    height: 30px;
+    height: 25px;
 }
 #dpedido{
     margin-left: 40px;
 }
 #lstatus{
-    margin-left: 435px;
+    margin-left: 340px;
 
 }
 #status{
+    height: 25px;
+}
+#ldpedido{
+    margin-left: 20px;
+}
+#lsituacao{
+    margin-left: 48px;
+}
+#astatus{
     height: 25px;
 }
