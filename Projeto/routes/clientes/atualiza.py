@@ -1,5 +1,6 @@
 from flask import Blueprint, render_template, request
 import mysql.connector
+from database import acesso
 
 atualiza_route = Blueprint('atualiza', __name__)
 
@@ -19,7 +20,7 @@ def atualizar_cliente():
     cidade = request.form['cidade']
     observa = request.form['observa']
 
-    conexao = mysql.connector.connect(host='localhost', database='d_mais',user='root', password='aas798118')
+    conexao = mysql.connector.connect(host=acesso.host, database=acesso.database,user=acesso.user, password=acesso.password)
     if conexao.is_connected():
         comando = (f"""UPDATE clientes SET
                 nome = '{nome}' , cpf ='{cpf}', nascimento ='{nascimento}', celular = '{celular}', email='{email}', instagram='{instagram}', cep='{cep}', endereco='{endereco}', numero='{num}', bairro='{bairro}', cidade='{cidade}', observacao='{observa}'
@@ -37,10 +38,11 @@ def atualizar_cliente():
         for i in retorno:
             clie = i[1]
             clientes.append(clie)
-        
+        print("conectado")
 
         if conexao.is_connected():
             cursor.close()
             conexao.close()
+            print("desconectado")
             return render_template('clientes/clientes_atualiza.html', clientes=clientes)
 

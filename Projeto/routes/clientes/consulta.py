@@ -1,5 +1,6 @@
 from flask import Blueprint, render_template,request, jsonify
 import mysql.connector
+from database import acesso
 import json
 consulta_route = Blueprint('consulta', __name__)
 
@@ -7,7 +8,7 @@ consulta_route = Blueprint('consulta', __name__)
 def dados():
     cliente = request.json.get('cliente')
   
-    conexao = mysql.connector.connect(host='localhost', database='d_mais',user='root', password='aas798118')
+    conexao = mysql.connector.connect(host=acesso.host, database=acesso.database,user=acesso.user, password=acesso.password)
     if conexao.is_connected():
         
         comando = (f"SELECT * FROM clientes WHERE nome = '{cliente}' " )

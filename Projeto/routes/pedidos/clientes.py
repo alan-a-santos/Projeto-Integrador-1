@@ -1,12 +1,11 @@
 from flask import Blueprint, render_template, request
 import mysql.connector
-
+from database import acesso
 pedido_route = Blueprint('pedido', __name__)
 
 @pedido_route.route('/cadastrop')
 def incluir():
-    conexao = mysql.connector.connect(host='localhost', database='d_mais',user='root', password='aas798118')
-
+    conexao = mysql.connector.connect(host=acesso.host, database=acesso.database,user=acesso.user, password=acesso.password)
     if conexao.is_connected():
         comando = ("SELECT * FROM clientes order by nome")
         cursor= conexao.cursor()

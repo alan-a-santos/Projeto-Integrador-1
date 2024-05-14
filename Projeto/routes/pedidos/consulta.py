@@ -1,6 +1,7 @@
 from flask import Blueprint, render_template, request, jsonify
 import mysql.connector
 import json
+from database import acesso
 
 consultap_route = Blueprint('consultap', __name__)
 
@@ -8,7 +9,7 @@ consultap_route = Blueprint('consultap', __name__)
 def consulta():
     cliente = request.json.get('cliente')
    
-    conexao = mysql.connector.connect(host='localhost', database='d_mais',user='root', password='aas798118')
+    conexao = mysql.connector.connect(host=acesso.host, database=acesso.database,user=acesso.user, password=acesso.password)
     if conexao.is_connected():
         comando = (f"SELECT * FROM clientes WHERE nome = '{cliente}' " )
         cursor= conexao.cursor(dictionary=True)
@@ -26,7 +27,7 @@ def consultap():
     cod = request.json.get('cod')
     sta = request.json.get('sta')
     
-    conexao = mysql.connector.connect(host='localhost', database='d_mais',user='root', password='aas798118')
+    conexao = mysql.connector.connect(host=acesso.host, database=acesso.database,user=acesso.user, password=acesso.password)
     if conexao.is_connected():
         comando = (f"SELECT cadastro, id FROM pedidos WHERE idcliente = '{cod}' and status ='{sta}' ")
         cursor= conexao.cursor(dictionary=True)
@@ -44,7 +45,7 @@ def consultap():
 def consultap2():
     pedido = request.json.get('pedido')
    
-    conexao = mysql.connector.connect(host='localhost', database='d_mais',user='root', password='aas798118')
+    conexao = mysql.connector.connect(host=acesso.host, database=acesso.database,user=acesso.user, password=acesso.password)
     if conexao.is_connected():
         comando = (f"SELECT * FROM pedidos WHERE id = '{pedido}' " )
         cursor= conexao.cursor(dictionary=True)

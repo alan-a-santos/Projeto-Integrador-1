@@ -1,5 +1,6 @@
 from flask import Blueprint, render_template, request
 import mysql.connector
+from database import acesso
 
 atualizap_route = Blueprint('atualizap', __name__)
 
@@ -12,7 +13,7 @@ def atualizar_pedido():
     if status == 1:status="Pedido em Aberto" 
     else: status ="Pedido Entregue"
 
-    conexao = mysql.connector.connect(host='localhost', database='d_mais',user='root', password='aas798118')
+    conexao = mysql.connector.connect(host=acesso.host, database=acesso.database,user=acesso.user, password=acesso.password)
     if conexao.is_connected():
         comando = (f"""UPDATE pedidos SET
                  status='{status}', observa='{observa}'

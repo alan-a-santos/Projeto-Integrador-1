@@ -1,6 +1,7 @@
 from flask import Blueprint, render_template
 import mysql.connector
 import json
+from database import acesso
 
 cliente_route = Blueprint('cliente', __name__)
 
@@ -10,7 +11,7 @@ def cadastro():
 
 @cliente_route.route('/consulta')
 def consulta():
-    conexao = mysql.connector.connect(host='localhost', database='d_mais',user='root', password='aas798118')
+    conexao = mysql.connector.connect(host=acesso.host, database=acesso.database,user=acesso.user, password=acesso.password)
     if conexao.is_connected():
         comando = ("SELECT * FROM clientes order by nome")
         cursor= conexao.cursor()

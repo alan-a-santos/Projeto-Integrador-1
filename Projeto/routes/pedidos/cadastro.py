@@ -1,13 +1,13 @@
 from flask import Blueprint, render_template, request
 import mysql.connector
 from datetime import date
-
+from database import acesso
 
 cadastrop_route = Blueprint('cadastrop', __name__)
 
 @cadastrop_route.route('/cadastro_pedido', methods=['post'])
 def  cadastrar_cliente():
-    conexao = mysql.connector.connect(host='localhost', database='d_mais',user='root', password='aas798118')
+    conexao = mysql.connector.connect(host=acesso.host, database=acesso.database,user=acesso.user, password=acesso.password)
     if conexao.is_connected():
         idcliente = request.form['id']
         entrega = request.form['entrega']
