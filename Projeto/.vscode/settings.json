@@ -29,5 +29,7 @@
         "env.bak{,/**}",
         "venv.bak{,/**}",
         ".vscode{,/**}"
-    ]
+    ],
+    "appService.defaultWebAppToDeploy": "/subscriptions/ee1d5562-1d53-43ac-903d-51a49a0b86de/resourceGroups/Projeto_Integrador_I/providers/Microsoft.Web/sites/dmaismarmitex",
+    "appService.deploySubpath": "."
 }
