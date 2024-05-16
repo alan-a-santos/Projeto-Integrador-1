@@ -31,7 +31,7 @@ def consulta():
 
 @cliente_route.route('/atualiza')
 def atualiza():
-    conexao = mysql.connector.connect(host='localhost', database='d_mais',user='root', password='aas798118')
+    conexao = mysql.connector.connect(host=acesso.host, database=acesso.database,user=acesso.user, password=acesso.password)
     if conexao.is_connected():
         comando = ("SELECT * FROM clientes order by nome")
         cursor= conexao.cursor()
@@ -51,7 +51,7 @@ def atualiza():
 
 @cliente_route.route('/exclui')
 def exclui():
-    conexao = mysql.connector.connect(host='localhost', database='d_mais',user='root', password='aas798118')
+    conexao = mysql.connector.connect(host=acesso.host, database=acesso.database,user=acesso.user, password=acesso.password)
     if conexao.is_connected():
         comando = ("SELECT * FROM clientes order by nome")
         cursor= conexao.cursor()

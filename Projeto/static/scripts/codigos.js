@@ -1,6 +1,4 @@
-function consultacep(){
-
-        
+function consultacep(){       
    if (document.getElementById(cep) != ""){
         console.log("fffffff")
         const cep = document.getElementById('cep')
@@ -17,13 +15,14 @@ function consultacep(){
             document.querySelector('input[name=endereco]').value = json.logradouro;
                 document.querySelector('input[name=bairro]').value = json.bairro;
                 document.querySelector('input[name=cidade]').value = json.localidade;                
+                document.getElementById('num').focus()
             }           
           });
       });
 }    
 }
 
-function carrega_dados(){
+function dados_cliente(){
     var cliente = document.querySelector('#nome').value
 
     fetch('/consultap', {
@@ -49,7 +48,7 @@ function carrega_dados(){
         document.getElementById('num').value = item.numero
         document.getElementById('bairro').value = item.bairro
         document.getElementById('cidade').value = item.cidade
-        document.getElementById('dcadastro').value = item.cadastro
+        document.getElementById('dcadastro').value = formato(item.cadastro)
         document.getElementById('observa').value = item.observacao
    
         
@@ -76,6 +75,7 @@ function carrega_dadospedido(){
     .then(data => {
         const item = data[0]
         console.log(data)
+      
         document.getElementById('id').value = item.id
         document.getElementById('cpf').value = item.cpf
         document.getElementById('celular').value = item.celular
@@ -123,7 +123,7 @@ function carrega_dadosp(){
         document.getElementById('num').value = item.numero
         document.getElementById('bairro').value = item.bairro
         document.getElementById('cidade').value = item.cidade
-        document.getElementById('anota').value = item.observacao
+        //document.getElementById('anota').value = item.observacao
     })
 }
 
@@ -164,7 +164,7 @@ function carrega_pedidos(){
         data.forEach(function(dicionario) {           
             var option = document.createElement("option");
             option.value = dicionario.id;
-            option.text = dicionario.cadastro;
+            option.text = formato(dicionario.cadastro);
             select.appendChild(option);
         })});
 }
@@ -182,29 +182,26 @@ function carrega_pedido(){
     .then(data => {
         const item = data[0]
         console.log(data)
-         document.getElementById('dentrega').value = item.dentrega
+        x = formato(item.dentrega)
+        document.getElementById('dentrega').value = x
         document.getElementById('descricao').value = item.descricao
         document.getElementById('entrega').value = item.entrega
         document.getElementById('quant').value = item.quantidade
         document.getElementById('observa').value = item.observa    
+         
 })
 }
-function limpar(){
-    document.getElementById('id').value = ""
-    document.getElementById('cpf').value =""
-    document.getElementById('nascimento').value = ""
-    document.getElementById('celular').value = ""
-    document.getElementById('email').value = ""
-    document.getElementById('instagram').value = ""
-    document.getElementById('cep').value = ""
-    document.getElementById('endereco').value = ""
-    document.getElementById('num').value = ""
-    document.getElementById('bairro').value = ""
-    document.getElementById('cidade').value =""
-    document.getElementById('dcadastro').value =""
-    document.getElementById('observa').value = ""
-    document.getElementById('dentrega').value = ""
-    document.getElementById('descricao').value =  ""
-    document.getElementById('entrega').value =  ""
-    document.getElementById('quant').value =  ""
+function formato(data) {
+    var dia  = data.split("-")[2];
+    var mes  = data.split("-")[1];
+    var ano  = data.split("-")[0];
+  
+    return ("0"+dia).slice(-2) + '/' + ("0"+mes).slice(-2) + '/' +ano ;
+}
+
+function cpf(){
+
+   
+   console.log('valor')
+
 }

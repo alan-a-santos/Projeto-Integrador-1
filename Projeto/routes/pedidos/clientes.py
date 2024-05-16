@@ -26,7 +26,7 @@ def incluir():
 
 @pedido_route.route('/consultap')
 def consultar():
-    conexao = mysql.connector.connect(host='localhost', database='d_mais',user='root', password='aas798118')
+    conexao = mysql.connector.connect(host=acesso.host, database=acesso.database,user=acesso.user, password=acesso.password)
 
     if conexao.is_connected():
         comando = ("SELECT * FROM clientes order by nome")
@@ -48,8 +48,7 @@ def consultar():
 
 @pedido_route.route('/atualizap')
 def atualizap():
-    conexao = mysql.connector.connect(host='localhost', database='d_mais',user='root', password='aas798118')
-
+    conexao = mysql.connector.connect(host=acesso.host, database=acesso.database,user=acesso.user, password=acesso.password)
     if conexao.is_connected():
         comando = ("SELECT * FROM clientes order by nome")
         cursor= conexao.cursor()
@@ -69,8 +68,7 @@ def atualizap():
 
 @pedido_route.route('/excluip')
 def excluir():
-    conexao = mysql.connector.connect(host='localhost', database='d_mais',user='root', password='aas798118')
-
+    conexao = mysql.connector.connect(host=acesso.host, database=acesso.database,user=acesso.user, password=acesso.password)
     if conexao.is_connected():
         comando = ("SELECT * FROM clientes order by nome")
         cursor= conexao.cursor()

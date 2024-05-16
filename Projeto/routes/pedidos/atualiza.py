@@ -9,10 +9,12 @@ def atualizar_pedido():
     id = request.form['spedido']
     status = request.form['astatus']
     observa = request.form['observa']
-    
-    if status == 1:status="Pedido em Aberto" 
-    else: status ="Pedido Entregue"
-
+    print(status)
+    if status == "2":
+        status="Pedido Entregue" 
+    else: 
+        status ="Pedido em Aberto"
+    print(status)
     conexao = mysql.connector.connect(host=acesso.host, database=acesso.database,user=acesso.user, password=acesso.password)
     if conexao.is_connected():
         comando = (f"""UPDATE pedidos SET

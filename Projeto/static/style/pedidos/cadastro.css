@@ -6,7 +6,7 @@
 header{
     display: flex;
     align-items: center;
-    background-color: darkgreen;
+    background-color: red;
 }
 
 h1{
@@ -19,7 +19,7 @@ h2{
     font-size: 60px;
     color: whitesmoke;
     margin-left: 300px;
-    color: darkgreen;
+    color: red;
     margin-top: -20px;
     margin-bottom: 30px;
 }
@@ -27,7 +27,7 @@ h2{
     height: 790px;
     width: 50px;
     margin-left: 0px;
-    border-color: seagreen;
+    border-color: red;
     border-radius: 5px;
     border-left: none;
     margin-top: px;
@@ -44,14 +44,14 @@ section{
 }
 .cad{
     margin-left: 20px;
-    border-color: seagreen;
+    border-color: red;
     border-radius: 5px;
     padding-top: 50px;
     width: 1650px;
 }
 .lentrada{
     margin-left: 15px;
-    color: darkgreen;
+    color: red;
     font-weight: 700;
  
 }
@@ -61,7 +61,7 @@ section{
     margin-left: 15px;
     height: 20px;
     font-size: 16px;
-
+    border-style:solid;
 }
 #lnome{
     margin-left: 60px;
@@ -123,13 +123,14 @@ section{
 .p4{
     margin-top: 50px;
     margin-left: 15px;
+    
 }
 #observa{
     border-radius: 5px;
     width: 1000px;
     height: 300px;
     font-size: 20px;
-    border-color: darkgreen;
+    border-color: red;
 }
 #confirma{
     margin-left: 300px;

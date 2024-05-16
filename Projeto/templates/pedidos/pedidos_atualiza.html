@@ -33,6 +33,7 @@
                     <p>
                         <input type="text" name="id" id="id" class="entrada" readonly>
                         <select name="nome" id="nome" class="entrada" onchange="carrega_dadosp()" >
+                            <option value=""></option>
                             {% for c in clientes %}
                             <option value="{{ c }}">{{ c}}</option>
                         {% endfor %}  
@@ -67,6 +68,7 @@
                                     <label class="lentrada" for="" id="ldescricao">Descrição</label>
                                     <label for="" class="lentrada" id="lstatus">Situação do Pedido</label>
                                     <label for="" class="lentrada" id="ldpedido">Data do Pedido</label>
+                   
                                     <label for="" class="lentrada" id="lsituacao">Atualizar Status</label>
                                 </p>
                                 <p class="p3">
@@ -77,9 +79,11 @@
                                         <option value="1">Pedido em Aberto</option>
                                         <option value="2">Pedido Entregue</option>
                                     </select>
+                                    
                                     <select  name="spedido"  id="spedido" class="entrada" onchange="carrega_pedido()">
                                         <option value=""></option>
                                      </select>
+                               
                                      <select  name="astatus"  id="astatus" class="entrada" > 
                                         <option value="0"></option>
                                         <option value="1">Pedido em Aberto</option>

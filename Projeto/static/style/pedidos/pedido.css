@@ -6,7 +6,7 @@
 header{
     display: flex;
     align-items: center;
-    background-color: darkgreen;
+    background-color: red;
 }
 
 h1{
@@ -20,7 +20,7 @@ h2{
     font-size: 120px;
     color: whitesmoke;
     margin-left: 300px;
-    color: darkgreen;
+    color: red;
     margin-top: 250px;
     margin-bottom: 30px;
 }
@@ -28,7 +28,7 @@ h2{
     height: 790px;
     width: 50px;
     margin-left: 0px;
-    border-color: seagreen;
+    border-color: red;
     border-radius: 5px;
     border-left: none;
     margin-top: px;
