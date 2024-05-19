@@ -1,4 +1,5 @@
 from flask import Blueprint, Flask
+import os
 from routes.index import index_route
 from routes.acesso import acesso_route
 from routes.home import home_route
@@ -33,5 +34,6 @@ app.register_blueprint(atualizap_route)
 app.register_blueprint(excluip_route)
 
 
-#if (__name__) == "(__main__)":
-app.run()
+if (__name__) == "(__main__)":
+    port = int(os.environ.get("PORT", 5000))
+    app.run(host='0.0.0.0', port=port)
