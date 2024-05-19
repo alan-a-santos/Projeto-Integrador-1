@@ -1,4 +1,4 @@
-from flask import Flask, Blueprint
+from flask import Blueprint, Flask
 from routes.index import index_route
 from routes.acesso import acesso_route
 from routes.home import home_route
